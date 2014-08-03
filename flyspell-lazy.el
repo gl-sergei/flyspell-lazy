@@ -783,7 +783,7 @@ This is the primary driver for `flyspell-lazy'."
               (setq start (save-excursion
                             (save-match-data
                               (goto-char start)
-                              (search-backward-regexp "[ \n\t\r\f]" (- (point) 50) t)
+                              (search-backward-regexp "[ \n\t\r\f]" (max (point-min) (- (point) 50)) t)
                               (point))))
               (setq end (save-excursion
                           (save-match-data
